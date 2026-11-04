@@ -1,0 +1,52 @@
+[project]
+name = "lobbynet-analysis"
+version = "0.1.0"
+description = "Analysis of lobbynet data releases (EU Transparency Register membership networks)"
+readme = "README.md"
+authors = [
+    { name = "Moritz Neujeffski", email = "m.neujeffski@posteo.de" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=2.0.0",
+    "marimo>=0.25.2",
+    "polars>=2.1.0",
+    "pyarrow>=26.0.1",
+    "python-igraph>=1.0.0",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+lobbynet-analysis = "lobbynet_analysis.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pyright>=1.1.414",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "N", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# marimo cells are functions returning their names; the style differs
+"notebooks/*.py" = ["B018", "N803", "RUF"]
+
+[tool.pyright]
+include = ["src", "tests"]
+pythonVersion = "3.12"
+typeCheckingMode = "basic"
+reportMissingTypeStubs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

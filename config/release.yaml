@@ -1,0 +1,12 @@
+# Welches lobbynet-Release dieses Projekt nutzt (Projektlandkarte:
+# /Users/weemoe/Documents/Projects/Lobbynet/docs/projects.md).
+#
+# Neue Version einspielen: data_version und manifest_sha256 anpassen
+# (shasum -a 256 <release>/manifest.json), dann `uv run lobbynet-analysis fetch`.
+# schema_major nur ändern, wenn der Analysecode an ein brechendes Schema
+# angepasst ist.
+data_version: "v0.1"
+schema_major: 1
+manifest_sha256: "1230fa32a4eda5ee9059e4874d42d79610236a3a8c2885daaa679e51c96e8ec0"
+# Ordner mit den Releases der Pipeline, relativ zu diesem Repository.
+source: "../Lobbynet/data/releases"

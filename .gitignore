@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Fetched data releases: copies of immutable pipeline releases, verified by
+# checksum, never committed (config/release.yaml pins the version).
+/data/
+
+# Results are reproducible from a release and the code; kept per version.
+/outputs/
+
+# Gephi files and DuckDB files are derived
+*.gexf
+*.duckdb
+*.duckdb.wal
+
+# Tools
+.pytest_cache/
+.ruff_cache/
+__marimo__/
+.Rhistory
+.Rproj.user/
+renv/library/
