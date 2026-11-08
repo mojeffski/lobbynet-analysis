@@ -5,8 +5,8 @@
 # (shasum -a 256 <release>/manifest.json), dann `uv run lobbynet-analysis fetch`.
 # schema_major nur ändern, wenn der Analysecode an ein brechendes Schema
 # angepasst ist.
-data_version: "v0.1"
+data_version: "v0.1.1"
 schema_major: 1
-manifest_sha256: "1230fa32a4eda5ee9059e4874d42d79610236a3a8c2885daaa679e51c96e8ec0"
+manifest_sha256: "fe85ba81dc995cbbf1a23326e02299cd3c4045c372d03d627794b8c165ed6327"
 # Ordner mit den Releases der Pipeline, relativ zu diesem Repository.
 source: "../Lobbynet/data/releases"

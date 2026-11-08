@@ -5,6 +5,18 @@ README des Releases („Known limitations“), weil das Wissen dann mit den
 Daten reist. v0.1 ist schon geschrieben und unveränderlich, seine
 Einschränkungen stehen deshalb hier.
 
+## v0.1.1 (Schema 1.1, 08.11.2026)
+
+Dieselben Daten wie v0.1: Die acht Tabellen sind bytegleich. Neu sind
+`text` (der ganze Text, wie ihn das LLM gelesen hat) und `mention` (alles,
+was das LLM in einem Text gelesen hat, auch vage und Sammelangaben, mit
+Präzisionsklasse). Weg zurück zur Quelle: `observation.mention_id` →
+`mention` → `text`. Das README des Releases enthält ab jetzt „Known
+limitations“. **`text` enthält teils Namen und E-Mail-Adressen von Personen:
+nicht veröffentlichen.**
+
+Alles Folgende gilt unverändert auch für v0.1.1.
+
 ## v0.1 (Schema 1.0, 03.11.2026)
 
 **Richtung und Zeit**
